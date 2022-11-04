@@ -12,7 +12,8 @@
 
 <body>
     <h1>Belajar Axios</h1>
-    <button onclick='add()'>Add</button>
+    <button onclick="add()">Add User</button>
+    <button onclick="update()">Updat User</button>
 
 
     <script>
@@ -26,12 +27,25 @@
 
         function add() {
             const newUser = {
-                name: 'baru',
-                email: 'baru@mail.com'
+                name: 'baru2',
+                email: 'baru2@mail.com'
             };
             axios.post('http://localhost:3000/users/', newUser)
                 .then(res => console.log(res))
                 .catch(err => console.log(err))
+        }
+
+        function update() {
+            const updateUser = {
+                name: 'baru update',
+                email: 'baruupdate@mail.com'
+            };
+            const idUser = 4;
+
+            axios.put(`http://localhost:3000/users/${idUser}`, updateUser)
+                .then(res => console.log(res))
+                .catch(err => console.log(err))
+                .finally(() => console.log('selesai'))
         }
     </script>
 </body>
