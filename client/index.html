@@ -12,16 +12,27 @@
 
 <body>
     <h1>Belajar Axios</h1>
+    <button onclick='add()'>Add</button>
 
 
     <script>
-        axios.get('http://localhost:3000/users/')
-            // .then(res => console.log(res))
-            .then(({
-                data
-            }) => console.log(data)) //kalo mau langsung ke data
-            .catch(err => console.log(err))
-            .finally(() => console.log('request selesai'))
+        // axios.get('http://localhost:3000/users/')
+        //     // .then(res => console.log(res))
+        //     .then(({
+        //         data
+        //     }) => console.log(data)) //kalo mau langsung ke data
+        //     .catch(err => console.log(err))
+        //     .finally(() => console.log('request selesai'));
+
+        function add() {
+            const newUser = {
+                name: 'baru',
+                email: 'baru@mail.com'
+            };
+            axios.post('http://localhost:3000/users/', newUser)
+                .then(res => console.log(res))
+                .catch(err => console.log(err))
+        }
     </script>
 </body>
 

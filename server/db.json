@@ -1,6 +1,4 @@
-{
-    "users": [
-        {
+{     "users": [{
             "id": 1,
             "name": "imdadu",
             "email": "imdadu@mail.com"
@@ -14,6 +12,11 @@
             "id": 3,
             "name": "semangat",
             "email": "semangat@mail.com"
+        },
+        {
+            "name": "baru",
+            "email": "baru@mail.com",
+            "id": 4
         }
     ]
 }
