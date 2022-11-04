@@ -8,13 +8,74 @@
     <title>Belajar Axios</title>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .row {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .col {
+            background-color: #4897d8;
+            width: 500px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px;
+            border-radius: 5px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: whitesmoke;
+        }
+
+        button {
+            width: 130px;
+            height: 30px;
+            font-size: 20px;
+            font-weight: bold;
+            border: none;
+            color: antiquewhite;
+            border-radius: 3px;
+        }
+
+        .add {
+            background-color: #f8a005;
+        }
+
+        .update {
+            background-color: #ffdb5c;
+        }
+
+        .delete {
+            background-color: #fa6e59;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Belajar Axios</h1>
-    <button onclick="add()">Add User</button>
-    <button onclick="update()">Update User</button>
-    <button onclick="deleteUser()">Delete User</button>
+    <div class="row">
+        <div class="col">
+            <h1>Belajar Axios</h1>
+            <div class="button">
+                <button class="add" onclick="add()">Add User</button>
+                <button class="update" onclick="update()">Update User</button>
+                <button class="delete" onclick="deleteUser()">Delete User</button>
+            </div>
+        </div>
+    </div>
+
 
 
     <script>
